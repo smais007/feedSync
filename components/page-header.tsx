@@ -7,6 +7,7 @@ import {
 } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import HeaderMenu from "./header-menu";
 import { Button } from "./ui/button";
 
 const PageHeader = () => {
@@ -29,7 +30,10 @@ const PageHeader = () => {
               </SignUpButton>
             </SignedOut>
             <SignedIn>
-              <UserButton />
+              <div className="">
+                <HeaderMenu />
+                <UserButton />
+              </div>
             </SignedIn>
           </div>
         </div>
